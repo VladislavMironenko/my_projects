@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/reviews_tg.css' %}">
+    {% endblock %}
+</head>
+<body>
+{%  block content %}
+<div class="d1">
+    <button id="button-search">🔍</button>
+</div>
+<div class="d2">
+    <form id="qq" method="get" action="{% url 'rev_tg' %}">
+        <input type="text" placeholder="Search here..." name="search">
+    </form>
+</div>
+<div class="all-objects">
+{% for i in title %}
+    <div class="card">
+        <div class="card-header">
+        <a class="tg-open" href="https://telegram.org.ru/">{{ i }}</a>
+        </div>
+        {% for j in reviews %}
+        {% if j.reporter == i %}
+      <div class="card-body">
+        <h5 class="card-title">{{ j.username }}:</h5>
+        <p class="card-text">{{ j.text }}</p>
+      </div>
+      <div class="card-bottom">
+        <h1>a</h1>
+      </div>
+        {% endif %}
+        {% endfor %}
+        </div>
+{% endfor %}
+</div>
+</body>
+</html>
+<script>
+    const loginButton_search = document.getElementById('button-search');
+    const loginForm_search = document.getElementById('qq');
+
+    loginButton_search.addEventListener('click', () => {
+        if (loginForm_search.style.display === 'block') {
+            loginForm_search.style.display = 'none';
+        } else {
+            loginForm_search.style.display = 'block';
+        }
+    });
+</script>
+{% endblock %}

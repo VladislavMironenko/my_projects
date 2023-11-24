@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Telega</title>
+    <link rel="stylesheet" href="{% static 'css/bots/еп.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="d1">
+            <button id="button-search">🔍</button>
+    </div>
+    <div class="d2">
+        <form id="qq" method="get" action="{% url 'ds' %}">
+            <input type="text" placeholder="Search here..." name="search">
+        </form>
+    </div>
+<div class="all-objects">
+{% for i in product_paginator %}
+    <div class="card-all">
+      <div class="card-name">
+          <p class="username-tg">{{ i.username }}</p>
+          <a class="tg-open" href="{{ i.url }}" target="_blank">Bot link</a>
+      </div>
+      <div class="card--">
+        <h5 class="card-title">{{ i.title }}</h5>
+        <p class="card-text">{{ i.text }}</p>
+      </div>
+      <div class="card-end">
+          {{ i.time }}
+      </div>
+    </div>
+{% endfor %}
+</div>
+</body>
+</html>
+<script>
+    const loginButton_search = document.getElementById('button-search');
+    const loginForm_search = document.getElementById('qq');
+
+    loginButton_search.addEventListener('click', () => {
+        if (loginForm_search.style.display === 'block') {
+            loginForm_search.style.display = 'none';
+        } else {
+            loginForm_search.style.display = 'block';
+        }
+    });
+</script>
+{% endblock %}

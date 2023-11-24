@@ -1,0 +1,107 @@
+.card {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    border: 3px solid black;
+    max-width: 700px; /* Желаемая максимальная ширина карты */
+    margin-left: 32%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта поднятия */
+  }
+
+.card-header {
+    border-bottom: 3px solid black;
+    display: flex;
+    padding: 0 10px;
+    width: 695px;
+    height: 25px;
+    /*text-align: center;*/
+    /*background-color: gainsboro;*/
+    /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-body {
+    /*background-color: #2e5abf;*/
+    /*position: relative;*/
+    margin-top: -80px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    /*border-radius: 0 0 10px 10px;*/
+}
+
+.card-text {
+    max-width: 500px; /* Максимальная высота текста */
+    overflow-wrap: break-word; /* Обрезание текста */
+    margin-left: 90px;
+    margin-top: 55px;
+    font-size: 13px;
+    font-weight: bold ;
+  /*text-overflow: ellipsis; !* Добавление многоточия в конце обрезанного текста *!*/
+  /*word-wrap: break-word; !* Переносы строк с учетом слов *!*/
+}
+.card-title{
+    position: relative;
+    top: 160px;
+    font-size: 30px;
+    left: -290px;
+
+}
+.card-title a{
+    color: #212121;
+}
+
+
+
+.card-bottom{
+    border-bottom: 3px solid black;
+    padding: 0 10px;
+    width: 695px;
+    height: 23px;
+    /*text-align: center;*/
+    /*background-color: gainsboro;*/
+    /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
+.selection-title{
+    position: relative;
+    /*background-color: green;*/
+    font-size: 15px;
+    color: white;
+    right: -17px;
+    border-radius: 0 8px 0 0;
+}
+
+.send{
+    position: relative;
+    background-color: green;
+    color: white;
+    right: -16px;
+    margin-left: 566px;
+    border-radius: 0 0 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send:hover{
+    background-color: gray;
+}
+
+

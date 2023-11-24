@@ -1,0 +1,134 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    border: 3px solid black;
+    max-width: 900px; /* Желаемая максимальная ширина карты */
+    margin: 120px; /* Отступ между картами */
+    margin-left: 28%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта поднятия */
+  }
+
+.card-header {
+  /*border-bottom: 3px solid black;*/
+  padding: 1px 10px;
+  width: 895px;
+  /*text-align: center;*/
+  /*background-color: gainsboro;*/
+  /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-body {
+    /*background-color: #2e5abf;*/
+    position: relative;
+    margin-top: -40px;
+    color: black;
+    /*top: -10px;*/
+    width: 100%;
+    /*text-align: center;*/
+    /*border-radius: 0 0 10px 10px;*/
+}
+
+.card-text {
+    position: relative;
+    max-width: 500px; /* Максимальная высота текста */
+    overflow-wrap: break-word; /* Обрезание текста */
+    margin-left: 230px;
+    /*margin-top: -10px;*/
+    top: -25px;
+    font-size: 20px;
+    /*font-weight: bold ;*/
+  /*text-overflow: ellipsis; !* Добавление многоточия в конце обрезанного текста *!*/
+  /*word-wrap: break-word; !* Переносы строк с учетом слов *!*/
+}
+.card-title{
+    position: relative;
+    top : 40px;
+    /*margin-top: -20px;*/
+    font-size: 20px;
+}
+
+
+
+.card-bottom{
+  /*border-bottom: 3px solid black;*/
+  padding: 1px 10px;
+  width: 895px;
+    height: 1px;
+  /*text-align: center;*/
+  /*background-color: gainsboro;*/
+  /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 4px;
+    font-weight: bold;
+}
+
+
+
+/*form {*/
+/*  position: relative;*/
+/*  width: 300px;*/
+/*  margin: 0 auto;*/
+/*}*/
+/*.d2 input {*/
+/*    width: 300px;*/
+/*    height: 30px;*/
+/*    margin-left: 830px;*/
+/*    padding-left: 10px;*/
+/*    border: 2px solid #7BA7AB;*/
+/*    border-radius: 5px;*/
+/*    outline: none;*/
+/*    background: #F9F0DA;*/
+/*    color: #9E9C9C;*/
+/*}*/
+
+#qq{
+    position: absolute;
+    left: 750px;
+    top: 15px;
+    display: none;
+}
+
+.d2 input{
+    position: relative;
+    width: 450px;
+    top: -5px;
+}
+
+.d1 button {
+  position: absolute;
+  top: 6px;
+  right: 490px;
+  width: 42px;
+  height: 36px;
+  border: none;
+  /*background-color: #7BA7AB;*/
+  /*border-radius: 0 5px 5px 0;*/
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.tg-open{
+    position: relative;
+    margin-left: 379px;
+    font-size: 25px;
+    color: white;
+    padding: 7px 0;
+    background-color: black;
+    top: -1px;
+    border-radius: 0 8px 0 0;
+}
+
+.tg-open:hover{
+    background-color: gray;
+}

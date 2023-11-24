@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block head %}{% endblock %}
+    <meta charset="UTF-8">
+    <title>AAA</title>
+</head>
+{% block title %}
+{% if user.is_authenticated %}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{ user.username}}, are you sure you want to log out of the account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><a href="{% url 'logout' %}">Log out</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                {% csrf_token %}
+                <p align="center" class="verif">{{ form.username.label_tag }}</p>
+                <p  align="center" >{{ form.username }}</p>
+                <p align="center" class="verif">{{ form.password.label_tag }}</p>
+                <p  align="center" >{{ form.password }}</p>
+                <br>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Log in</button>
+{#                <button class ="button" type="submit">Войти!</button>#}
+{#                <p class="reg" id="rega">Регистрация</p>#}
+                </form>
+                <button type="submit" class="reg-button"><a href="{% url 'register' %}">Register</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<div class="non-bootstrap-container">
+<div class="menu">
+    <div class="cnopki">
+        <a class="cnopopopki-home" id="home_page" href="/home">Home</a>
+        <button class="cnopopopki" id='reviews_add'>ADD REVIEWS</button>
+        <button class="cnopopopki" id="reviews-button" >REVIEWS</button>
+        <button class="cnopopopki" id="bots-button" >BOTS</button>
+        <button class="cnopopopki" id="bots-add">ADDING</button>
+        {% if user.is_authenticated %}
+        <button type="button" class="cnopopopki-ver" data-toggle="modal" data-target="#myModal">
+        <img class="img-smile" src="{% static 'img/qqq.jpg' %}">
+        </button>
+        {% else %}
+        <button type="button" class="cnopopopki-ver" data-toggle="modal" data-target="#myModal">
+        <img class="img-smile" src="{% static 'img/qqq.jpg' %}">
+        </button>
+        {% endif %}
+    </div>
+    <div id="adding_reviews">
+        <p>
+            <a class="add_reviews" href="{% url 'rev_tg_add' %}">Add Reviews about Telegram Bots</a>
+        </p>
+        <p>
+            <a class="add_reviews" href="{% url 'rev_ds_add' %}">Add Reviews about Discord Bots</a>
+        </p>
+    </div>
+    <div id="Bots">
+        <p>
+            <a class="bots" href="{% url 'tg' %}">Telegram Bot</a>
+        </p>
+        <p>
+            <a class="bots" href="{% url 'ds' %}">Discord Bot</a>
+        </p>
+    </div>
+    <div id="add_bots">
+        <p>
+            <a class="adding" href="{% url 'tg_post' %}">Add Telegram Bot</a>
+        </p>
+        <p>
+            <a class="adding" href="{% url 'ds_post' %}">Add Discord Bot</a>
+        </p>
+    </div>
+    <div id="reviews_bots">
+        <p>
+            <a class="reviews" href="{% url 'rev_tg' %}">Reviews about Telegram Bots</a>
+        </p>
+        <p>
+            <a class="reviews" href="{% url 'rev_ds' %}">Reviews about Discord Bots</a>
+        </p>
+    </div>
+</div>
+{#    <div id= "login-form">#}
+{#        <form method="post">#}
+{#            {% csrf_token %}#}
+{#            <p align="center" class="verif">{{ form.username.label_tag }}</p>#}
+{#            <p  align="center" >{{ form.username }}</p>#}
+{#            <p align="center" class="verif">{{ form.password.label_tag }}</p>#}
+{#            <p  align="center" >{{ form.password }}</p>#}
+{#            <br>#}
+{#            <button class ="button" type="submit">Войти!</button>#}
+{#            <p class="reg" id="rega">Регистрация</p>#}
+{#        </form>#}
+{#    </div>#}
+{#    <div id="reg-form">#}
+{#        <form method="post">#}
+{#        {% csrf_token %}#}
+{#            <h1 align="center">Регистрация</h1>#}
+{#            <p align="center" class="verif">{{ form_reg.username.label_tag }}</p>#}
+{#            <p  align="center" >{{ form_reg.username }}</p>#}
+{#            <p align="center" class="verif">{{ form_reg.password.label_tag }}</p>#}
+{#            <p  align="center" >{{ form_reg.password }}</p>#}
+{#            <br>#}
+{#            <button class="register-button" type="submit">Зарегистрироваться</button>#}
+{#        </form>#}
+{#    </div>#}
+</div>
+    {% block content %}
+    <div class="three-all">
+        <div class="three-tg">
+            <h1>Best Telegram Bots</h1>
+        <div class="line"></div>
+            {% for i in res_tg %}
+            <div class="card-all">
+                <div class="card-name">
+                    <p class="username">{{ i.username }}</p>
+                    <a class="tg-open" href="{{ i.url }}" target="_blank">Bot link</a>
+                </div>
+                <div class="card--">
+                    <h5 class="card-title">{{ i.title }}</h5>
+                    <p class="card-text">{{ i.text }}</p>
+                </div>
+                <div class="card-end">
+                    {{ i.time }}
+                </div>
+            </div>
+            {% endfor %}
+                </div>
+                <div class="three-ds">
+                <h1>Best Discord Bots</h1>
+        <div class="line"></div>
+            {% for i in res_ds %}
+            <div class="card-all">
+                <div class="card-name">
+                    <p class="username">{{ i.username }}</p>
+                    <a class="tg-open" href="{{ i.url }}" target="_blank">Bot link</a>
+                </div>
+                <div class="card--">
+                    <h5 class="card-title">{{ i.title }}</h5>
+                    <p class="card-text">{{ i.text }}</p>
+                </div>
+                <div class="card-end">
+                    {{ i.time }}
+                </div>
+            </div>
+            {% endfor %}
+                </div>
+                </div>
+            {% endblock %}
+        </div>
+</body>
+</html>
+<script>
+    const loginButton_reviews_add = document.getElementById('reviews_add');
+    const loginForm_reviews_add = document.getElementById('adding_reviews');
+
+    loginButton_reviews_add.addEventListener('mouseenter', () => {
+        loginForm_reviews_add.style.display = 'block';
+    });
+
+    loginForm_reviews_add.addEventListener('mouseenter', () => {
+        loginForm_reviews_add.style.display = 'block';
+    });
+
+    loginButton_reviews_add.addEventListener('mouseleave', () => {
+            if (!loginForm_reviews_add.matches(':hover')) {
+                loginForm_reviews_add.style.display = 'none';
+            }
+    });
+
+    loginForm_reviews_add.addEventListener('mouseleave', () => {
+            if (!loginButton_reviews_add.matches(':hover')) {
+                loginForm_reviews_add.style.display = 'none';
+            }
+    });
+    const loginButton_bots = document.getElementById('bots-button');
+    const loginForm_bots = document.getElementById('Bots');
+
+    loginButton_bots.addEventListener('mouseenter', () => {
+        loginForm_bots.style.display = 'block';
+    });
+
+    loginForm_bots.addEventListener('mouseenter', () => {
+        loginForm_bots.style.display = 'block';
+    });
+
+    loginButton_bots.addEventListener('mouseleave', () => {
+            if (!loginForm_bots.matches(':hover')) {
+                loginForm_bots.style.display = 'none';
+            }
+    });
+
+    loginForm_bots.addEventListener('mouseleave', () => {
+            if (!loginButton_bots.matches(':hover')) {
+                loginForm_bots.style.display = 'none';
+            }
+    });
+    const loginButton_add = document.getElementById('bots-add');
+    const loginForm_add = document.getElementById('add_bots');
+
+    loginButton_add.addEventListener('mouseenter', () => {
+        loginForm_add.style.display = 'block';
+    });
+
+    loginForm_add.addEventListener('mouseenter', () => {
+        loginForm_add.style.display = 'block';
+    });
+
+    loginButton_add.addEventListener('mouseleave', () => {
+            if (!loginForm_add.matches(':hover')) {
+                loginForm_add.style.display = 'none';
+            }
+    });
+
+    loginForm_add.addEventListener('mouseleave', () => {
+            if (!loginButton_add.matches(':hover')) {
+                loginForm_add.style.display = 'none';
+            }
+    });
+    const loginButton_reviews = document.getElementById('reviews-button');
+    const loginForm_reviews = document.getElementById('reviews_bots');
+
+    loginButton_reviews.addEventListener('mouseenter', () => {
+        loginForm_reviews.style.display = 'block';
+    });
+
+    loginForm_reviews.addEventListener('mouseenter', () => {
+        loginForm_reviews.style.display = 'block';
+    });
+
+    loginButton_reviews.addEventListener('mouseleave', () => {
+            if (!loginForm_reviews.matches(':hover')) {
+                loginForm_reviews.style.display = 'none';
+            }
+    });
+    loginForm_reviews.addEventListener('mouseleave', () => {
+            if (!loginButton_reviews.matches(':hover')) {
+                loginForm_reviews.style.display = 'none';
+            }
+    });
+    const loginButton_home = document.getElementById('login-button');
+    const loginForm_home = document.getElementById('login-form');
+
+    loginButton_home.addEventListener('click', () => {
+        if (loginForm_home.style.display === 'block') {
+            loginForm_home.style.display = 'none';
+        } else {
+            loginForm_home.style.display = 'block';
+        }
+    });
+    const loginButton_reg = document.getElementById('rega');
+    const loginForm_reg = document.getElementById('reg-form');
+
+    loginButton_reg.addEventListener('click', () => {
+        if (loginForm_reg.style.display === 'block') {
+            loginForm_reg.style.display = 'none';
+        } else {
+            loginForm_reg.style.display = 'block';
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

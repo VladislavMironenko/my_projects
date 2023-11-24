@@ -1,0 +1,222 @@
+/*!*html , body{*!*/
+/*!*    height: 98%;*!*/
+/*!*}*!*/
+
+/*!*body{*!*/
+/*!*    background: linear-gradient(#FF0099 , #493240);*!*/
+/*!*    background-size: 400%  400%;*!*/
+/*!*    animation: gradient 10s ease infinite;*!*/
+/*!*}*!*/
+/*!*@keyframes gradient{*!*/
+/*!*    0%{*!*/
+/*!*        background-position: 0 50%;*!*/
+/*!*    }*!*/
+/*!*    50%{*!*/
+/*!*        background-position: 50% 97%;*!*/
+/*!*    }*!*/
+/*!*    100% {*!*/
+/*!*        background-position: 0 50%;*!*/
+/*!*    }*!*/
+/*!*}*!*/
+
+.home{
+    margin: 15px 30px;
+    padding: 0.6px 120px;
+    border-radius: 30px;
+    background:wheat;
+}
+
+/*div{*/
+/*    margin: 15px 30px;*/
+/*    padding: 0.6px 120px;*/
+/*    border-radius: 30px;*/
+/*    background: linear-gradient(#360033 , #0b8793);*/
+/*    background-size: 400%  400%;*/
+/*    animation: gradient 10s ease infinite;*/
+/*}*/
+
+
+/*!*@keyframes gradient{*!*/
+/*!*    0%{*!*/
+/*!*        background-position: 0 50%;*!*/
+/*!*    }*!*/
+/*!*    50%{*!*/
+/*!*        background-position: 50% 97%;*!*/
+/*!*    }*!*/
+/*!*    100% {*!*/
+/*!*        background-position: 0 50%;*!*/
+/*!*    }*!*/
+/*!*}*!*/
+
+/*body{*/
+/*    !*margin: 0;*!*/
+/*    !*padding: 0;*!*/
+/*    !*background-color: #240b36;*!*/
+/*    background-image: url("https://img2.akspic.ru/previews/4/1/4/6/6/166414/166414-chernyj_i_belyj-geometriya-avtomobilnye_shiny-reshetka-yachejka-550x310.jpg");*/
+/*    !*background-size: cover;*!*/
+/*    !*background-repeat: no-repeat;*!*/
+
+/*}*/
+
+
+
+
+.home{
+    font-size: 15px;
+}
+
+.page_home{
+    text-decoration: none;
+    color: red;
+    font-size: 25px;
+}
+
+
+/*.page_home:hover{*/
+/*    color: blueviolet;*/
+/*}*/
+
+/*!*a{*!*/
+/*!*    color: #C6FFDD;*!*/
+/*!*    !*background-color: #c31432;*!*!*/
+/*!*    text-decoration: none;*!*/
+/*!*}*!*/
+/*!*a:hover{*!*/
+/*!*    color: bisque;*!*/
+/*!*}*!*/
+
+.all_bots{
+    display: flex;
+    justify-content: center;
+}
+
+.bots{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 150px;
+    background-color: black;
+    width: 20%;
+    font-size: 20px;
+    padding-top: 450px;
+    /*padding-left: 20px;*/
+    /*background-color: #FBD786;*/
+    /*margin-right: 31px;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+
+.nav-tg{
+    text-decoration: none;
+}
+
+
+.nav-ds{
+    text-decoration: none;
+    /*margin-right: 21px;*/
+    /*background-color: #f7797d;*/
+}
+.tg{
+    /*display: flex;*/
+    /*justify-content: left;*/
+    /*margin-right: 10px;*/
+    /*margin-right: 70%;*/
+    background-color: #FBD786;
+    /*padding: 179px 100px;*/
+    /*width: 700px;*/
+    /*/*box-shadow: 10px 10px 40px 20px #f7797d;*/
+    /*margin-left: 31px;*/
+    /*padding: 100px 10px;*/
+    /*background-color: #f7797d;*/
+}
+
+.ds{
+    /*display: flex;*/
+    /*justify-content: right;*/
+    /*margin-right: 10px;*/
+    /*margin-left: 70%;*/
+    background-color: #FBD786;
+    /*padding: 179px 146px;*/
+}
+.tg a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 360px;
+    margin-left: 150px;
+}
+
+.ds a{
+}
+
+img{
+    position: absolute;
+}
+
+.tg-img .img{
+    top : 277px;
+    left: 494px;
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+
+}
+
+
+.ds-img .img{
+    top : 277px;
+    right: 490px;
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+
+}
+
+
+.info{
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    text-decoration: none;
+    font-size: 40px;
+    color: #4CAF50;
+    /*background-color: #c31432;*/
+}
+
+.info:hover{
+    color: azure;
+}
+
+
+.people{
+    color: #c31432;
+    display: flex;
+    justify-content: right;
+    /*text-align: right;*/
+    padding-right: 15px;
+    padding-top: 350px;
+    font-size: 15px;
+    /*padding-bottom: 0;*/
+}
+
+
+.title .tg{
+    position: absolute;
+    top : 423px;
+    left: 471px;
+    border-radius: 30px;
+    padding: 110px 78px;
+    background-color: darkgray;
+}
+
+
+.title .ds{
+    position: absolute;
+    top : 423px;
+    right: 471px;
+    border-radius: 30px;
+    padding: 110px 78px;
+    background-color: darkgray;
+}

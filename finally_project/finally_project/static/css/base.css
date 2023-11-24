@@ -1,0 +1,527 @@
+html , body{
+    margin: 0;
+    height: 0;
+}
+
+.add_reviews{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#adding_reviews{
+    position: absolute;
+    top: 50px;
+    right: 160px;
+    display: none;
+    background-color: white;
+    box-shadow: 0 0 15px grey;
+    width: 500px;
+    height: 250px;
+    z-index: 9999999;
+}
+
+
+#reviews_bots {
+    position: absolute;
+    top: 50px;
+    right: 120px;
+    display: none;
+    background-color: white;
+    box-shadow: 0 0 15px grey;
+    width: 400px;
+    height: 250px;
+    z-index: 9999999;
+    /*padding: 50px  143px;*/
+}
+
+
+.reviews{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*#bots-add {*/
+/*    position: absolute;*/
+/*    !*background-color: aquamarine;*!*/
+/*    top : 35px;*/
+/*    left: 1000px;*/
+/*}*/
+
+#add_bots {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+    background-color: white;
+    box-shadow: 0 0 15px grey;
+    width: 350px;
+    height: 250px;
+    z-index: 9999999;
+    /*padding: 50px  143px;*/
+}
+
+
+.adding{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*#bots-button {*/
+/*    position: absolute;*/
+/*    !*background-color: aquamarine;*!*/
+/*    top : 35px;*/
+/*}*/
+
+#Bots {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    display: none;
+    box-shadow: 0 0 15px grey;
+    background-color: white;
+    width: 265px;
+    height: 250px;
+    z-index: 9999999;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*padding: 50px  143px;*/
+}
+#reg-form{
+    position: absolute;
+    top: 190px;
+    right: 370px;
+    display: none;
+    box-shadow: 0 0 15px grey;
+    background-color: white;
+    width: 200px;
+    height: 300px;
+}
+
+#reg-form button{
+    font-size: 15px;
+    margin-left: 24px;
+    background-color: white;
+}
+
+#reg-form h1{
+    margin-top: 1px;
+    font-size: 20px;
+    /*margin-left: 24px;*/
+    background-color: white;
+}
+
+
+.bots{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+/*#login-button {*/
+/*    position: absolute;*/
+/*    !*background-color: red;*!*/
+/*    !*border-color: #c31432;*!*/
+/*    right: 250px;*/
+/*    top : 35px*/
+/*}*/
+
+#login-form {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+    box-shadow: 0 10px 30px grey;
+    /*background-color: #212121;*/
+    /*color: white;*/
+    width: 200px;
+    /*padding: 50px  30px;*/
+    height: 300px;
+}
+
+
+
+
+
+.menu{
+    /*padding: 0 0;*/
+    height: 50px;
+    /*border-radius: 30px;*/
+    background-color: #212121;
+    box-shadow: 1px 5px 5px grey;
+    text-shadow: 0 3px 5px whitesmoke;
+    position: relative;
+    /*color: #240b36;*/
+    /*align-content: center;*/
+}
+
+/*.home .home_page{*/
+/*    position: absolute;*/
+/*    text-decoration: none;*/
+/*    font-size: 30px;*/
+/*    top:3px;*/
+/*    left: 70px;*/
+/*    color: aqua;*/
+/*}*/
+
+.cnopki{
+    /*position: fixed;*/
+    margin-left: 1420px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*margin-top: 0;*/
+}
+
+.cnopopopki{
+    /*margin-right: 30px;*/
+    text-decoration: none;
+    color: white;
+    /*margin-top: -100px;*/
+    width: 100px;
+    height: 52px;
+    right: 20px;
+    /*margin-right: 5px;*/
+    /*text-align: center;*/
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+}
+
+
+.cnopopopki-home{
+    position: absolute;
+    font-size: 30px;
+    top: 2px;
+    left: 92px;
+    color: white;
+    text-decoration: none;
+}
+
+.cnopopopki-home:hover{
+    text-decoration: none;
+}
+
+
+
+
+.reg{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 5px 56px;
+}
+.button{
+    font-size: 16px;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    color: black;
+    margin-left: 67px;
+}
+
+button{
+    font-size: 20px;
+    background-color: #212121;
+    border-radius: 0;
+    border-width: 0;
+    color: black;
+    /*margin-left: 60px;*/
+}
+
+
+.reg-button{
+    position: relative;
+    top: -30px;
+    background-color: gray;
+    border-radius: 3px 3px 3px 3px ;
+}
+
+
+.reg-button a{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+.reg-button:hover{
+    background-color: darkgray;
+}
+
+
+.cnopki .cnopopopki:hover{
+    cursor: pointer;
+    background-color: darkgray;
+}
+.cnopopopki-ver{
+    position: relative;
+    font-size: 26px;
+    right: 10px;
+    top: -5px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.cnopopopki-ver button{
+    width: 80px;
+    height: 52px;
+}
+
+
+
+.cnopopopki-ver:hover{
+    cursor: pointer;
+}
+.img-smile{
+    /*position: relative;*/
+    height: 26px;
+    border-radius: 150px;
+    width: 26px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/*p:hover{*/
+/*    cursor: pointer;*/
+/*}*/
+.modal-body{
+    font-size: 20px;
+}
+
+
+.modal-footer .btn-primary{
+    background-color: #c31432;
+    border-color: #c31432;
+}
+
+
+.modal-footer .btn-primary a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.modal-body .btn{
+    position: relative;
+    margin-top: 40px;
+    left: 300px;
+}
+
+
+
+
+
+
+
+
+.card-all {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    border: 3px solid black;
+    max-width: 700px; /* Желаемая максимальная ширина карты */
+    margin: 50px; /* Отступ между картами */
+    margin-left: 6%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта поднятия */
+  }
+
+.card-name {
+    /*display: flex;*/
+    /*justify-content: center;*/
+  border-bottom: 3px solid black;
+  padding: 0 10px;
+    height: 33px;
+    /*max-width: 700p   x;*/
+  /*width: 395px;*/
+  /*text-align: center;*/
+  /*background-color: gainsboro;*/
+  /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-- {
+    /*max-width: 700px;*/
+    /*background-color: #2e5abf;*/
+    color: black;
+    padding: 10px 200px;
+    width: 100%;
+    text-align: center;
+    /*border-radius: 0 0 10px 10px;*/
+}
+
+.card-text {
+    max-width: 500px; /* Максимальная высота текста */
+    overflow-wrap: break-word; /* Обрезание текста */
+    margin-left: 33px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold ;
+  /*text-overflow: ellipsis; !* Добавление многоточия в конце обрезанного текста *!*/
+  /*word-wrap: break-word; !* Переносы строк с учетом слов *!*/
+}
+.card-title{
+    position: relative;
+    left: 15px;
+    margin-top: 10px;
+    font-size: 30px;
+
+}
+.card-title a{
+    color: #212121;
+}
+
+
+
+.card-end{
+  border-bottom: 3px solid black;
+  padding: 1px 10px;
+  /*width: 695px;*/
+    height: 21px;
+  /*text-align: center;*/
+  /*background-color: gainsboro;*/
+  /*border-radius: 5px;*/
+    color: white;
+    /*font-size: 20px;*/
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.three-ds .tg-open{
+    position: relative;
+    right: -51px;
+    background-color: green;
+    top: -48px;
+    margin-left: 406px;
+    font-size: 14px;
+    color: white;
+    padding: 10px 15px;
+    /*margin-l: -10px;*/
+    border-radius: 0 8px 0 0;
+}
+
+.tg-open{
+    position: relative;
+    right: -31px;
+    background-color: green;
+    top: -48px;
+    margin-left: 426px;
+    font-size: 14px;
+    color: white;
+    padding: 10px 15px;
+    /*margin-l: -10px;*/
+    border-radius: 0 8px 0 0;
+}
+
+.tg-open:hover{
+    background-color: gray;
+    color: white;
+}
+
+/*.three-all{*/
+/*    display: flex;*/
+/*    !*justify-content: center;*!*/
+/*}*/
+
+.three-tg h1{
+    position: relative;
+    border-bottom: 3px solid black;
+    border-radius: 3px 3px 0 0;
+    top: -2px;
+    text-align: center;
+    background-color:black;
+    color: white;
+}
+
+
+.three-ds h1{
+    position: relative;
+    border-bottom: 3px solid black;
+    border-radius: 3px 3px 0 0;
+    /*top: -2px;*/
+    text-align: center;
+    background-color:black;
+    color: white;
+}
+.three-all{
+    display: flex;
+}
+
+.three-tg {
+    position: relative;
+    /*align-items: center;*/
+    border: 3px solid black;
+    max-width: 700px; /* Желаемая максимальная ширина карты */
+    margin: 50px; /* Отступ между картами */
+    margin-left: 10%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта поднятия */
+  }
+
+.three-ds {
+    position: relative;
+    /*align-items: center;*/
+    border: 3px solid black;
+    max-width: 700px; /* Желаемая максимальная ширина карты */
+    margin: 50px; /* Отступ между картами */
+    margin-left: 10%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта поднятия */
+  }
+
+
+/*.three-ds{*/
+/*    position: relative;*/
+/*    !*top: -1000px;*!*/
+/*    margin-top: -890px;*/
+/*}*/
+
+/*.three-ds .card-all{*/
+/*    position: relative;*/
+/*    !*top: -37px;*!*/
+/*    margin-top: 86px;*/
+/*}*/
+
+
+
+.card-- .card-title{
+    position: relative;
+    left: -5px;
+}
+
+.card-- .card-text{
+    position: relative;
+    left: -19px;
+}
+
+.username{
+    position: relative;
+}

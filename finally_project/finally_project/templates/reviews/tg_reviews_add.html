@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Telega</title>
+    <link rel="stylesheet" href="{% static 'css/reviews_tg_add.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+<div class="all-objects">
+    <div class="card">
+      <div class="card-header">
+          <p class="selection-title">{{ form.reporter }}</p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ user }}</h5>
+        <p class="card-text">{{ form.text }}</p>
+      </div>
+      <div class="card-bottom">
+          <button class="send" type="submit">Add a review</button>
+      </div>
+    </div>
+</div>
+</form>
+{% endblock %}
+</body>
+</html>
